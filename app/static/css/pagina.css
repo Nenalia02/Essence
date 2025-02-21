@@ -1,0 +1,182 @@
+/* Estilos gerais para o corpo da página */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F1F1;  /* Cor de fundo suave */
+  font-family: Arial, sans-serif;  /* Fonte para o texto */
+}
+
+
+/* Container das notificações */
+#notification-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  z-index: 1000;
+}
+
+/* Estilo das notificações */
+.notification {
+  background-color: #F29B9B;
+  color: #603C28;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0px 0px 10px #F2D5CE;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+
+
+/* Estilo do cabeçalho fixo da página */
+header {
+  width: 100%;  /* O cabeçalho ocupa toda a largura da tela */
+  box-sizing: border-box;  /* Inclui o padding no cálculo da largura total */
+  background: linear-gradient(180deg, #F2D5CE, #F29B9B);  /* Gradiente suave para o fundo */
+  padding: 10px 40px;  /* Espaçamento interno */
+  position: fixed;  /* Cabeçalho fixo no topo */
+  top: 0;  /* Fica no topo da página */
+  left: 0;  /* Fica no lado esquerdo da página */
+  z-index: 10;  /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+/* Estilo da navegação dentro do cabeçalho */
+nav {
+  display: flex;  /* Flexbox para organizar os itens */
+  flex-direction: row;  /* Itens na linha */
+  align-items: center;  /* Alinha os itens verticalmente */
+  justify-content: space-between;  /* Espaço entre os itens */
+  margin: 0;  /* Remove margens extras */
+}
+
+/* Estilo para o menu (itens da lista) */
+nav > ul {
+  display: flex;  
+  flex-direction: row;  /* Links dispostos na horizontal */
+  list-style: none;  
+  padding: 0;  /* Remove o padding */
+}
+
+/* Estilo de cada item de menu */
+nav > ul > li {
+  margin: 0 15px;  /* Espaço entre os itens de navegação */
+}
+
+/* Estilo para o ícone de navegação do "Usuário" */
+nav > ul > li > a > .nav-icon {
+  width: 30px;  /* Define a largura da imagem */
+  height: auto; /* A altura será ajustada automaticamente para manter as proporções */
+  object-fit: contain;  /* Garante que a imagem se ajuste sem distorcer */
+}
+
+/* Estilo dos links de navegação */
+nav > ul > li > a {
+  color: #603C28; 
+  text-decoration: none;  
+  font-weight: bold;  
+}
+
+/* Efeito de hover nos links */
+nav > ul > li:hover > a { 
+  color: #F29B9B;  
+  transition: color 0.3s ease-in-out;
+}
+
+/* Estilo do título da página (Essence) */
+nav > h1 {
+  cursor: pointer;  
+  color: #603C28;  
+  font-size: 25px;  
+  font-weight: bold;  
+}
+
+nav > h1 a {
+  color:#603C28;
+  text-decoration: none;
+}
+
+/* Estilo do conteúdo principal da página */
+main {
+  padding: 100px 20px 20px;  /* Espaçamento da área principal para não sobrepor o cabeçalho */
+  text-align: center;  
+}
+
+/* Estilo geral das seções */
+section {
+  margin: 50px auto;  /* Espaço entre as seções e centraliza */
+  max-width: 1200px;  /* Limita a largura máxima das seções para telas grandes */
+  background-color: #fff;  /* Fundo branco para as seções */
+  padding: 20px;  /* Espaçamento interno */
+  border-radius: 10px;  /* Bordas arredondadas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Estilo dos títulos dentro das seções */
+section h2 {
+  color: #603C28;  /* Cor do título */
+}
+
+/* Estilo do parágrafo dentro das seções */
+section p {
+  color: #4A2C20;  /* Cor do texto */
+}
+
+/* Estilos para a grade de imagens nas seções */
+.image-grid {
+  display: grid;  /* Usando grid para distribuir as imagens */
+  grid-template-columns: repeat(4, 1fr);  /* 4 colunas em telas grandes */
+  gap: 20px;  /* Espaço entre as imagens */
+  margin-top: 20px;  /* Espaço acima da grade */
+}
+
+/* Ajuste para telas médias (máximo de 1200px de largura) */
+@media (max-width: 1200px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);  /* 3 colunas em telas médias */
+  }
+}
+
+/* Ajuste para telas menores (máximo de 800px de largura) */
+@media (max-width: 800px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 colunas em telas menores */
+  }
+}
+
+/* Ajuste para telas muito pequenas (máximo de 500px de largura) */
+@media (max-width: 500px) {
+  .image-grid {
+    grid-template-columns: 1fr;  /* 1 coluna em telas muito pequenas */
+  }
+}
+
+/* Estilo para os containers de imagens */
+.image-container img {
+  width: 100%;  /* A imagem ocupa toda a largura do container */
+  height: auto;  /* A altura se ajusta automaticamente para manter as proporções */
+  border-radius: 8px;  /* Bordas arredondadas para as imagens */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave nas imagens */
+  object-fit: cover;  /* A imagem preenche o container sem distorção */
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Aumenta 10% */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: transform 0.3s ease-in-out; /* Suaviza a animação */
+}

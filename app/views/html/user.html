@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de {{ username }}</title>
+    <link rel="stylesheet" href="/static/css/user.css"> <!-- Arquivo CSS para estilos -->
+    <script src="/static/js/user.js"></script>
+</head>
+<body>
+
+    <div class="user-container">
+        <h1>Bem-vindo, {{ username }}!</h1>
+        <p>Essa é sua página personalizada.</p>
+
+        <button onclick="window.location.href='/pagina'">Voltar para a página inicial</button>
+
+        <form action="/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
+</body>
+</html>

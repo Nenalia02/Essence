@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Essence</title>
+   <link rel="stylesheet" href="/static/css/pagina.css">
+   <script src="/static/js/pagina.js"></script>  
+</head>
+
+
+<body>
+   <!-- Cabeçalho para a navegação da página -->
+   <header>
+      <nav>
+         <h1 id="boasVindas" onclick="mudarEstilo()">
+            <a href="/pagina">
+                Essence
+            </a>
+        </h1>
+        
+         <ul>
+            <li><a href="#feminino">Feminino</a></li>
+            <li><a href="#masculino">Masculino</a></li>
+            <li><a href="#bebe">Bebê</a></li>
+            <li><a href="/portal"><img src="/static/img/usuario.png" alt="Usuário" class="nav-icon"></a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <div id="notification-container"></div>
+
+   <main>
+      <!-- Seção Feminino -->
+      <section id="feminino">
+         <div id="text-container">
+            <h2>Feminino</h2>
+            <p>Conheça nossa linha exclusiva de perfumes femininos.</p>
+         </div>
+         <!-- Grade de imagens para a seção feminina -->
+         <div class="image-grid">
+            <!-- Container de imagem 1 -->
+            <div class="image-container">
+               <img src="/static/img/Feminino/feminino_rosé.jpg" alt="Rose D.Amour" onclick="enviarClique('Rose D.Amour - R$ 289,90')">
+            </div>
+            <!-- Container de imagem 2 -->
+            <div class="image-container">
+               <img src="/static/img/Feminino/feminino_luxo.jpg" alt="Sensual Glow" onclick="enviarClique('Sensual Glow - R$ 329,90')">
+            </div>
+            <!-- Container de imagem 3 -->
+            <div class="image-container">
+               <img src="/static/img/Feminino/feminino_chique.jpg" alt="Crystal Charm" onclick="enviarClique('Crystal Charm - R$ 349,90')">
+            </div>
+            <!-- Container de imagem 4 -->
+            <div class="image-container">
+               <img src="/static/img/Feminino/feminino_classico.jpg" alt="Velvet Petals" onclick="enviarClique('Velvet Petals - R$ 299,90')">
+            </div>
+         </div>
+      </section>
+
+      <!-- Seção Masculino -->
+      <section id="masculino">
+         <div id="text-container">
+            <h2>Masculino</h2>
+            <p>Descubra as fragrâncias masculinas sofisticadas.</p>
+         </div>
+         <!-- Grade de imagens para a seção masculina -->
+         <div class="image-grid">
+            <!-- Container de imagem 1 -->
+            <div class="image-container">
+               <img src="/static/img/Masculino/Masculino_ciano.jpg" alt="Ocean Spirit" onclick="enviarClique('Ocean Spirit - R$ 259,90')">
+            </div>
+            <!-- Container de imagem 2 -->
+            <div class="image-container">
+               <img src="/static/img/Masculino/Masculino_escuro.jpg" alt="Dark Intensity" onclick="enviarClique('Dark Intensity - R$ 329,90')">
+            </div>
+            <!-- Container de imagem 3 -->
+            <div class="image-container">
+               <img src="/static/img/Masculino/Masculino_classico.jpg" alt="Red Obsession" onclick="enviarClique('Red Obsession - R$ 299,90')">
+            </div>
+            <!-- Container de imagem 4 -->
+            <div class="image-container">
+               <img src="/static/img/Masculino/Masculino_chique.jpg" alt="Chic Emerald" onclick="enviarClique('Chic Emerald - R$ 349,90')">
+            </div>
+         </div>
+      </section>
+
+      <!-- Seção Bebê -->
+      <section id="bebe">
+         <div id="text-container">
+            <h2>Bebê</h2>
+            <p>Perfumes suaves e delicados para os pequenos.</p>
+         </div>
+         <!-- Grade de imagens para a seção bebê -->
+         <div class="image-grid">
+            <!-- Container de imagem 1 -->
+            <div class="image-container">
+               <img src="/static/img/Baby/Baby_amarelo.jpg" alt="Soft Vanilla Baby" onclick="enviarClique('Soft Vanilla Baby - R$ 149,90')">
+            </div>
+            <!-- Container de imagem 2 -->
+            <div class="image-container">
+               <img src="/static/img/Baby/Baby_rosa.jpg" alt="Sweet Cotton Baby" onclick="enviarClique('Sweet Cotton Baby - R$ 159,90')">
+            </div>
+            <!-- Container de imagem 3 -->
+            <div class="image-container">
+               <img src="/static/img/Baby/Baby_branco.jpg" alt="Moonlight Baby" onclick="enviarClique('Moonlight Baby - R$ 169,90')">
+            </div>
+            <!-- Container de imagem 4 -->
+            <div class="image-container">
+               <img src="/static/img/Baby/Baby_azul.jpg" alt="Dreamy Baby" onclick="enviarClique('Dreamy Baby - R$ 159,90')">
+            </div>
+         </div>
+      </section>
+
+      <!-- Seção Usuário -->
+      <section id="usuario" style="display: none;">
+         <div id="text-container">
+            <h2>Usuário</h2>
+            <p>Acesse sua conta ou faça login.</p>
+         </div>
+      </section>
+   </main>
+</body>
+
+</html>
